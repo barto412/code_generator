@@ -1,0 +1,54 @@
+{
+  "service_name": "DeviceManagement",
+  "version": "1.0",
+  "methods": [
+    {
+      "name": "send_telemetry",
+      "request": {
+        "device_id": "string",
+        "timestamp": "string",
+        "temperature": "float",
+        "humidity": "float",
+        "vibration": "float"
+      },
+      "response": {
+        "status": "string",
+        "message": "string"
+      }
+    },
+    {
+      "name": "update_configuration",
+      "request": {
+        "device_id": "string",
+        "sampling_rate": "int",
+        "operational_mode": "string"
+      },
+      "response": {
+        "accepted": "bool",
+        "message": "string"
+      }
+    },
+    {
+      "name": "validate_firmware",
+      "request": {
+        "device_id": "string",
+        "firmware_checksum": "string"
+      },
+      "response": {
+        "valid": "bool",
+        "message": "string"
+      }
+    },
+    {
+      "name": "run_diagnostics",
+      "request": {
+        "device_id": "string",
+        "test_suite": "string"
+      },
+      "response": {
+        "result": "string",
+        "passed": "bool"
+      }
+    }
+  ]
+}

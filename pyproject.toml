@@ -1,0 +1,14 @@
+[project]
+name = "iot-code-generator"
+version = "0.1.0"
+description = "Automated code generator for IoT device management RPC interfaces."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0","black>=24.0","pylint>=2.18"]
+
+[build-system]
+requires = ["setuptools>=65.0","wheel"]
+build-backend = "setuptools.build_meta"
